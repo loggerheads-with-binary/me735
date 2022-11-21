@@ -1,6 +1,13 @@
+
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 #Script directory is obtained 
 pushd "${SCRIPT_DIR}"
+
+
+##Installing requirements 
+sudo apt-get install python3-pip
+python3 -m pip install -r requirements.txt
+
 
 rm -v results/* #Delete old result videos 
 sqlite3 db.sqlite3 "delete from entries;" #Delete old database entries 
