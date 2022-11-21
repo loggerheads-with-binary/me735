@@ -9,7 +9,8 @@ src/mesh_flow2
 
 
 ##Results folders
-results/
+results/*.mp4
+results/rotate 
 results.freeze1/
 
 ##Pickle files 
