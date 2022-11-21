@@ -1,0 +1,31 @@
+tstamp,holder_code,src,no_of_operations,operations,stability_1,time_taken,fpath
+"2022-11-21 08:11:07",1,Static.mp4,1,"[""pointspline""]",0.0018352155913011,9.5139776,Static_(pointspline).mp4
+"2022-11-21 08:11:14",1,Static.mp4,1,"[""point-feature""]",0.00188852077680873,16.4609813,Static_(point-feature).mp4
+"2022-11-21 08:11:23",2,Dynamic.mp4,1,"[""pointspline""]",0.00255996259636598,9.759683,Dynamic_(pointspline).mp4
+"2022-11-21 08:11:26",1,Static.mp4,1,"[""l1""]",0.00488587507848614,27.9205097,Static_(l1).mp4
+"2022-11-21 08:11:31",2,Dynamic.mp4,1,"[""point-feature""]",0.00175008814765796,18.0337378,Dynamic_(point-feature).mp4
+"2022-11-21 08:11:38",1,Static.mp4,2,"[""point-feature"", ""pointspline""]",0.00202950553185654,27.6034434,Static_(point-feature+pointspline).mp4
+"2022-11-21 08:11:43",2,Dynamic.mp4,1,"[""l1""]",0.00318712958690886,29.9627516,Dynamic_(l1).mp4
+"2022-11-21 08:11:51",1,Static.mp4,2,"[""pointspline"", ""point-feature""]",0.00187578793293069,33.2320925,Static_(pointspline+point-feature).mp4
+"2022-11-21 08:11:52",1,Static.mp4,2,"[""l1"", ""point-feature""]",0.00390654670448976,52.8274646,Static_(l1+point-feature).mp4
+"2022-11-21 08:12:03",2,Dynamic.mp4,2,"[""point-feature"", ""pointspline""]",0.00221345196132874,35.9964159,Dynamic_(point-feature+pointspline).mp4
+"2022-11-21 08:12:09",2,Dynamic.mp4,2,"[""l1"", ""point-feature""]",0.00231360957310692,54.1872904,Dynamic_(l1+point-feature).mp4
+"2022-11-21 08:12:11",1,Static.mp4,2,"[""l1"", ""pointspline""]",0.00446077443019937,47.2690869,Static_(l1+pointspline).mp4
+"2022-11-21 08:12:11",2,Dynamic.mp4,2,"[""pointspline"", ""point-feature""]",0.00206008457708215,36.1469795,Dynamic_(pointspline+point-feature).mp4
+"2022-11-21 08:12:12",1,Static.mp4,2,"[""point-feature"", ""l1""]",0.00242500172728422,61.8606364,Static_(point-feature+l1).mp4
+"2022-11-21 08:12:21",2,Dynamic.mp4,2,"[""l1"", ""pointspline""]",0.00194086185254402,41.2320619,Dynamic_(l1+pointspline).mp4
+"2022-11-21 08:12:21",1,Static.mp4,2,"[""pointspline"", ""l1""]",0.00429817692289405,52.3124505,Static_(pointspline+l1).mp4
+"2022-11-21 08:12:21",2,Dynamic.mp4,2,"[""point-feature"", ""l1""]",0.00185004198654737,54.8175993,Dynamic_(point-feature+l1).mp4
+"2022-11-21 08:12:34",1,Static.mp4,3,"[""point-feature"", ""l1"", ""pointspline""]",0.00201301012385272,72.9670062,Static_(point-feature+l1+pointspline).mp4
+"2022-11-21 08:12:39",2,Dynamic.mp4,2,"[""pointspline"", ""l1""]",0.00451314230635371,45.4182436,Dynamic_(pointspline+l1).mp4
+"2022-11-21 08:12:46",1,Static.mp4,3,"[""pointspline"", ""l1"", ""point-feature""]",0.00431061180665172,75.751268,Static_(pointspline+l1+point-feature).mp4
+"2022-11-21 08:12:51",1,Static.mp4,3,"[""l1"", ""point-feature"", ""pointspline""]",0.00243934521497873,69.0570655,Static_(l1+point-feature+pointspline).mp4
+"2022-11-21 08:12:57",2,Dynamic.mp4,3,"[""point-feature"", ""l1"", ""pointspline""]",0.00166821994677517,70.8693503,Dynamic_(point-feature+l1+pointspline).mp4
+"2022-11-21 08:13:03",1,Static.mp4,3,"[""pointspline"", ""point-feature"", ""l1""]",0.00243324467346024,73.9575956,Static_(pointspline+point-feature+l1).mp4
+"2022-11-21 08:13:08",2,Dynamic.mp4,3,"[""pointspline"", ""l1"", ""point-feature""]",0.00184959195357596,72.2466625,Dynamic_(pointspline+l1+point-feature).mp4
+"2022-11-21 08:13:08",1,Static.mp4,3,"[""point-feature"", ""pointspline"", ""l1""]",0.00417406226364438,72.7267976,Static_(point-feature+pointspline+l1).mp4
+"2022-11-21 08:13:12",2,Dynamic.mp4,3,"[""l1"", ""point-feature"", ""pointspline""]",0.00208119853585598,68.4901168,Dynamic_(l1+point-feature+pointspline).mp4
+"2022-11-21 08:13:12",1,Static.mp4,3,"[""l1"", ""pointspline"", ""point-feature""]",0.00199739847388924,73.1668876,Static_(l1+pointspline+point-feature).mp4
+"2022-11-21 08:13:17",2,Dynamic.mp4,3,"[""point-feature"", ""pointspline"", ""l1""]",0.00382013122708623,71.4634206,Dynamic_(point-feature+pointspline+l1).mp4
+"2022-11-21 08:13:19",2,Dynamic.mp4,3,"[""pointspline"", ""point-feature"", ""l1""]",0.00183321857711286,73.7682451,Dynamic_(pointspline+point-feature+l1).mp4
+"2022-11-21 08:13:23",2,Dynamic.mp4,3,"[""l1"", ""pointspline"", ""point-feature""]",0.00189066424495206,56.0891104,Dynamic_(l1+pointspline+point-feature).mp4
