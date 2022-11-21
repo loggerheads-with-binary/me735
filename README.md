@@ -1,11 +1,13 @@
 # Code Base for Course Project 
 A repository for all the source code, tests, static files and other relevant data/files for the ME 735(Computer Graphics and Product Modelling) project under the guidance of Prof S.S Pande 
 
-## Group Details :  
-Aniruddh Radhakrishnan - 190260007
-Vidushi Verma - 190100135
-Prasham Shah - 19D100018
-Dhruv Sah - 190110020
+## Group Details : <br>
+| Name                   | Roll No   |
+|------------------------|-----------|
+| Aniruddh Radhakrishnan | 190260007 |
+| Vidushi Verma          | 190100135 |
+| Prasham Shah           | 19D100018 |
+| Dhruv Sah              | 190110020 |
 
 ## Algorithms Used 
 1. L1 Camera Trajectory Stabilization Algorithm 
