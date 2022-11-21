@@ -115,21 +115,21 @@ def lppsolve(F_transforms : list[np.array] , frame_shape : tuple[int] ,
 	#Creating all variables in a n_frames*N matrix 
 	##Delcaring the decision variables 
  	# Matrix terms, all positive due to mod constraint  
-	Pt_terms = pulp.LpVariable.dicts("e1", ((i, j) for i in range(n_frames) for j in range(N)), lowBound=0.0)
+	first_derivative_terms = pulp.LpVariable.dicts("e1", ((i, j) for i in range(n_frames) for j in range(N)), lowBound=0.0)
 	
  	# Matrix terms for the second derivative,
-	first_derivative_terms = pulp.LpVariable.dicts("e2", ((i, j) for i in range(n_frames) for j in range(N)), lowBound=0.0)
+	second_derivative_terms = pulp.LpVariable.dicts("e2", ((i, j) for i in range(n_frames) for j in range(N)), lowBound=0.0)
 	
  	# Matrix terms for the third derivative,
-	second_derivative_terms = pulp.LpVariable.dicts("e3", ((i, j) for i in range(n_frames) for j in range(N)), lowBound=0.0)
+	third_derivative_terms = pulp.LpVariable.dicts("e3", ((i, j) for i in range(n_frames) for j in range(N)), lowBound=0.0)
  
 	# Stabilization parameters for each frame 
 	p = pulp.LpVariable.dicts("p", ((i, j) for i in range(n_frames) for j in range(N)))
 
 	#Formulation of LPP objective to be minimized 
-	prob += w1 * pulp.lpSum([Pt_terms[i, j] * c1[j] for i in range(n_frames) for j in range(N)]) + \
-			w2 * pulp.lpSum([first_derivative_terms[i, j] * c2[j] for i in range(n_frames) for j in range(N)]) + \
-			w3 * pulp.lpSum([second_derivative_terms[i, j] * c3[j] for i in range(n_frames) for j in range(N)])
+	prob += w1 * pulp.lpSum([first_derivative_terms[i, j] * c1[j] for i in range(n_frames) for j in range(N)]) + \
+			w2 * pulp.lpSum([second_derivative_terms[i, j] * c2[j] for i in range(n_frames) for j in range(N)]) + \
+			w3 * pulp.lpSum([third_derivative_terms[i, j] * c3[j] for i in range(n_frames) for j in range(N)])
 	
 	# Apply smoothness constraints on the slack variables e1, e2 and e3 using params p
 	for t in range(n_frames - 3):
@@ -146,13 +146,14 @@ def lppsolve(F_transforms : list[np.array] , frame_shape : tuple[int] ,
   		# Apply the smoothness constraints on the slack variables e1, e2 and e3
 		#Creating constraints so that in a discrete frame of a continous variable, variables are smooth 
 		#Essentially no weird jumps across frames for e1,e2,e3 matrix terms 
+  
 		for j in range(N):
-			prob += -1*Pt_terms[t, j] <= constraint_term_t[j]
-			prob += Pt_terms[t, j] >= constraint_term_t[j]
-			prob += -1 * first_derivative_terms[t, j] <= constraint_term_d1[j] - constraint_term_t[j]
-			prob += first_derivative_terms[t, j] >= constraint_term_d1[j] - constraint_term_t[j]
-			prob += -1 * second_derivative_terms[t, j] <= constraint_term_d2[j] - 2*constraint_term_d1[j] + constraint_term_t[j]
-			prob += second_derivative_terms[t, j] >= constraint_term_d2[j] - 2*constraint_term_d1[j] + constraint_term_t[j]
+			prob += -1*first_derivative_terms[t, j] <= constraint_term_t[j]
+			prob += first_derivative_terms[t, j] >= constraint_term_t[j]
+			prob += -1 * second_derivative_terms[t, j] <= constraint_term_d1[j] - constraint_term_t[j]
+			prob += second_derivative_terms[t, j] >= constraint_term_d1[j] - constraint_term_t[j]
+			prob += -1 * third_derivative_terms[t, j] <= constraint_term_d2[j] - 2*constraint_term_d1[j] + constraint_term_t[j]
+			prob += third_derivative_terms[t, j] >= constraint_term_d2[j] - 2*constraint_term_d1[j] + constraint_term_t[j]
 	
 	# Constraints
 	for t1 in range(n_frames):
